@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Shop with Webpack</title>
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="alert-element"></div>
+		<header class="header">
+			<div class="logo">Users</div>
+			<div class="admin-panel">Admin panel</div>
+		</header>
+		<div class="table">
+			<div class="item nav">
+				<div class="item1">#</div>
+				<div class="item2">Full Name</div>
+				<div class="item3">Username</div>
+				<div class="item4">Email</div>
+				<div class="item5">Settings</div>
+			</div>
+			<div class="main"></div>
+			<div class="cabinet">
+				<i class="uil uil-times close"></i>
+				<div class="about"></div>
+			</div>
+		</div>
+		<div class="loader">Loading...</div>
+		<div class="modal">
+			<div class="user">Name <span class="user-name"></span></div>
+			<div class="user">Username <span class="user-username"></span></div>
+			<a href="/">Home</a>
+		</div>
+		<div class="panel-overlay">
+			<i class="uil uil-times close-panel"></i>
+			<div class="panel-menus">
+				<button class="add-btn">Add</button>
+				<button class="edit-btn">Edit</button>
+				<button class="delete-btn">Delete</button>
+			</div>
+			<div class="add-form-overlay">
+				<i class="uil uil-times close-add-form"></i>
+				<h2>Add user</h2>
+				<form class="add-form">
+					<input type="text" name="firstname" class="add-form-name" placeholder="First name">
+					<input type="text" name="lastname" class="add-form-surname" placeholder="Last name">
+					<input type="text" name="username" class="add-form-username" placeholder="Username">
+					<input type="number" name="number" class="add-form-number" placeholder="Phone number">
+					<input type="text" name="country" class="add-form-country" placeholder="Country">
+					<!-- <select name="countries"></select> -->
+					<input type="text" name="city" class="add-form-city" placeholder="City">
+					<input type="text" name="website" class="add-form-website" placeholder="Website">
+					<button class="add-form-add-btn">Add</button>
+				</form>
+			</div>
+			<div class="edit-form-overlay">
+				<i class="uil uil-times close-edit-form"></i>
+				<h2>Edit user</h2>
+				<form class="edit-form">
+					<select name="" id="edit-form-find-id">
+						<option value="">Select user</option>
+					</select>
+					<input type="text" name="firstname" class="edit-form-name" placeholder="First name">
+					<input type="text" name="lastname" class="edit-form-surname" placeholder="Last name">
+					<input type="text" name="username" class="edit-form-username" placeholder="Username">
+					<input type="number" name="number" class="edit-form-number" placeholder="Phone number">
+					<input type="text" name="country" class="add-form-country" placeholder="Country">
+					<!-- <select name="countries"></select> -->
+					<input type="text" name="city" class="edit-form-city" placeholder="City">
+					<input type="text" name="website" class="edit-form-website" placeholder="Website">
+					<button class="edit-form-edit-btn">Edit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
