@@ -44,7 +44,7 @@ body {
   border-radius: 20px;
   width: 90%;
   height: fit-content;
-  min-height: 450px;
+  min-height: 500px;
   overflow: auto;
   background-color: #fff;
   margin-top: 30px;
@@ -145,8 +145,8 @@ button:nth-child(2) {
 .close {
   font-size: 40px;
   position: absolute;
-  right: 250px;
-  top: 100px;
+  right: 50px;
+  top: 50px;
   cursor: pointer;
   color: #000;
 }

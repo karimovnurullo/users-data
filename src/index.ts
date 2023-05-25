@@ -126,9 +126,14 @@ function UI(data: any[]) {
          swithCabinet(true);
          about.innerHTML = `
          <div class="ceil"><span>Full name</span><span>${user.firstname}</span></div>
-         <div class="ceil"><span>Username</span><span>${user.lastname}</span></div>
+         <div class="ceil"><span>Last name</span><span>${user.lastname}</span></div>
+         <div class="ceil"><span>Username</span><span>${user.username}</span></div>
+         <div class="ceil"><span>Age</span><span>${user.age}</span></div>
+         <div class="ceil"><span>Job</span><span>${user.job}</span></div>
          <div class="ceil"><span>Email</span><span>${user.more.email}</span></div>
          <div class="ceil"><span>Phone</span><span>${user.more.phone}</span></div>
+         <div class="ceil"><span>State</span><span>${user.address.state}</span></div>
+         <div class="ceil"><span>City</span><span>${user.address.city}</span></div>
          `;
          // <div class="ceil"><span>City</span><span>${user.address.city}</span></div>
          // <div class="ceil"><span>Street</span><span>${user.address.street}</span></div>
@@ -157,27 +162,7 @@ const closeAddFormBtn = document.querySelector('.close-add-form');
 const closeEditFormBtn = document.querySelector('.close-edit-form');
 const editFormFindSelect = document.querySelector<HTMLSelectElement>('#edit-form-find-id');
 
-// getDate().then((data) => {
-//    for (let i = 0; i < data.length; i++) {
-//       const user = data[i];
-//       const option = document.createElement('option');
-//       option.value = user.id;
-//       option.text = user.lastname + ' ' + user.firstname;
-//       editFormFindSelect.appendChild(option);
-//       option.addEventListener('click', (e) => {
 
-//          // let user = data[parseInt(editFormFindSelect.value)];
-//          editForm.firstname.value = user.firstname;
-//          editForm.lastname.value;
-//          editForm.username.value;
-//          editForm.number.value;
-//          editForm.country.value;
-//          editForm.city.value;
-//          editForm.website.value;
-
-//       })
-//    }
-// })
 getDate().then((data) => {
    for (let i = 0; i < data.length; i++) {
       const user = data[i];
@@ -188,7 +173,6 @@ getDate().then((data) => {
    }
 });
 
-
 editFormFindSelect.addEventListener('change', () => {
    let id = editFormFindSelect.value;
    console.log(typeof id);
@@ -198,10 +182,12 @@ editFormFindSelect.addEventListener('change', () => {
          editForm.firstname.value = user.firstname;
          editForm.lastname.value = user.lastname;
          editForm.username.value = user.username;
+         editForm.age.value = user.age;
+         editForm.job.value = user.job;
+         editForm.email.value = user.more.email;
          editForm.number.value = user.more.phone;
          editForm.country.value = user.address.state;
          editForm.city.value = user.address.city;
-         editForm.website.value = user.website;
       }
       else {
          for (let key in editForm) {
@@ -210,9 +196,6 @@ editFormFindSelect.addEventListener('change', () => {
       }
    })
 })
-
-
-
 
 addForm.addEventListener('submit', (e) => {
    e.preventDefault();
@@ -246,12 +229,10 @@ editForm.addEventListener("submit", (e) => {
 });
 
 
-
-
-
 adminPanelBtn.addEventListener("click", () => {
    panelOverlay.classList.add('show');
 });
+
 
 panelAddMenu.addEventListener('click', () => {
    addFormOverlay.classList.add('show');
